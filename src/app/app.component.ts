@@ -21,7 +21,7 @@
 //   }
 // }
 import { Component, ViewChild } from '@angular/core';
-import { StatusBar } from '@ionic-native/status-bar';
+import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { App, MenuController, Nav, Platform } from 'ionic-angular';
 // import { ComponentsListPage } from '../pages/components/list/components.list.page';
