@@ -7,8 +7,8 @@ import { SignupPage } from '../signup/signup';
 
 
 @Component({
-  selector: 'page-login',
-  templateUrl: 'login.html',
+	selector: 'page-login',
+	templateUrl: 'login.html',
 })
 export class LoginPage {
 	loginForm: FormGroup;
@@ -25,7 +25,7 @@ export class LoginPage {
 		});
 	}
 
-  login() {
+	login() {
 		let data = this.loginForm.value;
 
 		if (!data.email) {
@@ -41,18 +41,31 @@ export class LoginPage {
 				() => this.navCtrl.setRoot(HomePage),
 				error => this.loginError = error.message
 			);
-    }
+	}
 
-  signup(){
-    this.navCtrl.push(SignupPage);
-  }
+	signup() {
+		this.navCtrl.push(SignupPage);
+	}
 
-  loginWithGoogle() {
-  this.auth.signInWithGoogle()
-    .then(
-      () => this.navCtrl.setRoot(HomePage),
-      error => console.log(error.message)
-    );
-	 }
-
+	loginWithGoogle() {
+		this.auth.signInWithGoogle()
+			.then(
+				() => this.navCtrl.setRoot(HomePage),
+				error => console.log(error.message)
+			);
+	}
+	loginWithGithub() {
+		this.auth.signInWithGithub()
+			.then(
+				() => this.navCtrl.setRoot(HomePage),
+				error => console.log(error.message)
+			);
+	}
+	loginWithFacebook() {
+		this.auth.signInWithFacebook()
+			.then(
+				() => this.navCtrl.setRoot(HomePage),
+				error => console.log(error.message)
+			);
+	}
 }

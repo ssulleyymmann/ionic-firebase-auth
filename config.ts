@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class FBConfig {
-	public wordpressApiUrl = 'http://demo.titaniumtemplates.com/wordpress/?json=1';
+	public baseUrl = 'http://demo';
 }
 
 export const firebaseConfig = {
